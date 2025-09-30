@@ -12,4 +12,10 @@ class Kelas extends Model
     protected $table = 'kelas';
 
     protected $fillable = ['nama_kelas'];
+
+    // Tambahkan method baru di sini
+    public static function getKelas()
+    {
+        return self::all(); // ambil semua data kelas dari database
+    }
 }
