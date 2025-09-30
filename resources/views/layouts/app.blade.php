@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Mahasiswa</title>
+    <title>@yield('title')</title>
     <style>
         body {
             background-color: #ffe0edff; /* pink pastel halaman */
@@ -41,12 +41,8 @@
 </head>
 <body>
 
-    <div class="card">
-        <img src="{{ asset('images/intan.jpeg') }}" alt="Foto Profil">
-        <div class="info">{{ $nama }}</div>
-        <div class="info">{{ $kelas }}</div>
-        <div class="info">{{ $npm }}</div>
-    </div>
+    {{-- Navbar bisa ditambahkan di sini kalau perlu --}}
+    @yield('content')
 
 </body>
 </html>
