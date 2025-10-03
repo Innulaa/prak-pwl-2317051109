@@ -2,8 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
-
-
+use App\Http\Controllers\MataKuliahController; // 🔥 tambahkan ini
 
 // 🏠 Halaman Utama (Welcome Page)
 Route::get('/', function () {
@@ -21,3 +20,8 @@ Route::resource('user', UserController::class);
 Route::get('/profile', function () {
     return view('user.profile');
 })->name('profile');
+
+// 📘 Mata Kuliah Routes
+Route::get('/matakuliah', [MataKuliahController::class, 'index']);
+Route::get('/matakuliah/create', [MataKuliahController::class, 'create'])->name('matakuliah.create');
+Route::post('/matakuliah', [MataKuliahController::class, 'store'])->name('matakuliah.store');
