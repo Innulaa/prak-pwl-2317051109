@@ -12,7 +12,7 @@ class KelasSeeder extends Seeder
      */
     public function run(): void
     {
-        // Masukkan 4 data kelas
+        // Masukkan 4 data kelass
         $data = ['A', 'B', 'C', 'D'];
 
         foreach ($data as $nama) {
