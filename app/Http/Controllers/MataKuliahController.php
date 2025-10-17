@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Matakuliah;
+use Monolog\Handler\WebRequestRecognizerTrait;
 
 class MataKuliahController extends Controller
 {
